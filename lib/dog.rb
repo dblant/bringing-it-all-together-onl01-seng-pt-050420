@@ -1,3 +1,5 @@
+require 'pry'
+
 class Dog
 attr_accessor :name, :breed
 attr_reader :id
@@ -48,7 +50,7 @@ def self.drop_table
   def self.create(dog_data)
     dog = Dog.new(name:dog_data[1], breed:dog_data[2], id:dog_data[0])
     dog.save
-    
+    binding.pry
   end
 
 
